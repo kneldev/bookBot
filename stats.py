@@ -6,7 +6,7 @@ class CharacterCount(TypedDict):
     num: int
 
 
-def sort_on(character_count):
+def sort_on(character_count: CharacterCount) -> int:
     return character_count["num"]
 
 

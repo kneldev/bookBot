@@ -11,6 +11,7 @@ def sort_on(character_count: CharacterCount) -> int:
 
 
 def list_the_dicts(main_dict: dict[str, int]) -> list[CharacterCount]:
+    # Convert the raw frequency map into a sortable list and drop non-letter characters.
     list_dicts = []
 
     for entry in main_dict:
@@ -26,6 +27,7 @@ def word_count(string: str) -> int:
 
 def char_count(string: str) -> dict[str, int]:
     character_count = {}
+    # Normalize case so uppercase and lowercase letters are counted together.
     string = string.lower()
 
     for letter in string:

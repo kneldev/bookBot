@@ -6,9 +6,8 @@ def input_handler():
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
-    else:
-        book_path = sys.argv[1]
-        return book_path
+    book_path = sys.argv[1]
+    return book_path
 
 
 def get_book_text(path_to_file: str) -> str:
@@ -17,6 +16,7 @@ def get_book_text(path_to_file: str) -> str:
 
 
 def format_output(sorted_counts: list[CharacterCount]) -> None:
+    # Print only the pre-filtered alphabetic character counts in descending order.
     for item in sorted_counts:
         print(f"{item['char']}: {item['num']}")
 

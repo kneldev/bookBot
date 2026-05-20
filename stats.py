@@ -1,3 +1,11 @@
+from typing import TypedDict
+
+
+class CharacterCount(TypedDict):
+    char: str
+    num: int
+
+
 def word_count(string: str) -> int:
     return len(string.split())
 
